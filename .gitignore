@@ -1,0 +1,13 @@
+# Folders
+pkg/
+src/
+
+# Source archicves
+*.tar.gz
+
+# Pacman packages
+*.pkg.tar.zst
+
+# Not ready yet
+ciadpi-completion.bash
+

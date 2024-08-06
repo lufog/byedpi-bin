@@ -1,0 +1,12 @@
+[Unit]
+Description=ByeDPI
+
+[Service]
+StandardOutput=null
+StandardError=journal
+EnvironmentFile=-/etc/byedpi/options
+ExecStart=ciadpi $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
+
