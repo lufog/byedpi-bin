@@ -14,7 +14,7 @@ license=('MIT')
 #conflicts=()
 #replaces=()
 backup=(etc/byedpi/options)
-#options=()
+options=(!debug)
 #install=
 #changelog=
 
@@ -36,13 +36,13 @@ source_armv7h=("https://github.com/hufrea/byedpi/releases/download/v$_ver_st/bye
 #noextract=()
 sha256sums_x86_64=('20abf3ec48798b1a17de55b9ca8c70a4ac270e8bf58725d45d680de8efb4c40f'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                   'a3cef82b292db120648ecfdc81e5a67ece4b78cd4ec1edf8ac18c58ad6461d63')
+                   '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 sha256sums_aarch64=('1508de12fe302d6cec92173c6ab18196716e8650ccfd70bde21df18d3822492d'
                     '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                    'a3cef82b292db120648ecfdc81e5a67ece4b78cd4ec1edf8ac18c58ad6461d63')
+                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 sha256sums_armv7h=('38393ed4b4e6022e9dc1e954008205f1fb570c39776418f5261e30c8a5412d6a'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                   'a3cef82b292db120648ecfdc81e5a67ece4b78cd4ec1edf8ac18c58ad6461d63')
+                   '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 
 package() {
   cd $srcdir
