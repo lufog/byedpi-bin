@@ -21,26 +21,32 @@ options=(!debug)
 _ver_st=${pkgver/%.0/}   # strip trailing zero (0.10.0 -> 0.10)
 _ver_slt=${_ver_st/#0./} # strip leading and trailing zeros (0.10.0 -> 10)
 
-source_x86_64=("https://github.com/hufrea/byedpi/releases/download/v$_ver_st/byedpi-$_ver_slt-x86_64.tar.gz"
+source_x86_64=("$url/releases/download/v$_ver_st/byedpi-$_ver_slt-x86_64.tar.gz"
+               "$url/raw/main/LICENSE"
                byedpi.service
                #ciadpi-completion.bash
                byedpi_options)
-source_aarch64=("https://github.com/hufrea/byedpi/releases/download/v$_ver_st/byedpi-$_ver_slt-aarch64.tar.gz"
+source_aarch64=("$url/releases/download/v$_ver_st/byedpi-$_ver_slt-aarch64.tar.gz"
+                "$url/raw/main/LICENSE"
                 byedpi.service
                 #ciadpi-completion.bash
                 byedpi_options)
-source_armv7h=("https://github.com/hufrea/byedpi/releases/download/v$_ver_st/byedpi-$_ver_slt-armv7l.tar.gz"
+source_armv7h=("$url/releases/download/v$_ver_st/byedpi-$_ver_slt-armv7l.tar.gz"
+                "$url/raw/main/LICENSE"
                 byedpi.service
                 #ciadpi-completion.bash
                 byedpi_options)
 #noextract=()
 sha256sums_x86_64=('20abf3ec48798b1a17de55b9ca8c70a4ac270e8bf58725d45d680de8efb4c40f'
+                   '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 sha256sums_aarch64=('1508de12fe302d6cec92173c6ab18196716e8650ccfd70bde21df18d3822492d'
+                    '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                     '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                     '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 sha256sums_armv7h=('38393ed4b4e6022e9dc1e954008205f1fb570c39776418f5261e30c8a5412d6a'
+                   '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
 
@@ -49,7 +55,8 @@ package() {
   
   install -Dm 755 "$srcdir"/ciadpi-*  "$pkgdir"/usr/bin/ciadpi
   install -Dm 644 "$srcdir"/byedpi.service -t "$pkgdir"/usr/lib/systemd/system
-  #install -Dm 644 "$srcdir"/ciadpi-completion.bash "$pkgdir"/usr/share/bash-completion/completions/ciadpi
   install -Dm 644 "$srcdir"/byedpi_options "$pkgdir"/etc/byedpi/options
+  install -Dm 644 "$srcdir"/LICENSE -t "$pkgdir"/usr/share/licenses/byedpi
+  #install -Dm 644 "$srcdir"/ciadpi-completion.bash "$pkgdir"/usr/share/bash-completion/completions/ciadpi
 }
 

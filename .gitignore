@@ -2,8 +2,9 @@
 pkg/
 src/
 
-# Source archicves
+# Source
 *.tar.gz
+LICENSE
 
 # Pacman packages
 *.pkg.tar.zst
