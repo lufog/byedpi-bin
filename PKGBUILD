@@ -1,6 +1,6 @@
 # Maintainer: Aleksey Smirnov <debugger94 [at] gmail [dot] com>
 pkgname=byedpi-bin
-pkgver=0.13.0
+pkgver=0.14.0
 pkgrel=1
 pkgdesc="local SOCKS proxy server. Implementation of some DPI bypass methods."
 arch=('x86_64' 'aarch64' 'armv7h')
@@ -37,15 +37,15 @@ source_armv7h=("$url/releases/download/v$_ver_st/byedpi-$_ver_slt-armv7l.tar.gz"
                 #ciadpi-completion.bash
                 byedpi_options)
 #noextract=()
-sha256sums_x86_64=('d2eef7199ddcc5d359e5319d1849c18d283026e2deb1027d5f4d90b5f482ce7b'
+sha256sums_x86_64=('8d4fda16862cb464f5c6c80894cb3f83418332d23f0936af0747f3f9b9ec59fc'
                    '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
-sha256sums_aarch64=('9fc210390ed56b1321e37314ed1d2c557c63e53f5bc457996094bfe5518651cb'
+sha256sums_aarch64=('da12789ac7de6e706a60127f8af1dd00287fa5991b19f15d835b0fbcc384224a'
                     '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                     '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                     '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
-sha256sums_armv7h=('d8f9926d6bccc264a83ca0c8433733911212972dc55fc0b83e6d05b7f3913e7d'
+sha256sums_armv7h=('92f0ddfaed6afec149597ae1431ff1cf946767ed23fa978b6a76f5f05ff96f57'
                    '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
