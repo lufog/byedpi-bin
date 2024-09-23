@@ -1,11 +1,19 @@
 [Unit]
 Description=ByeDPI
+Documentation=https://github.com/hufrea/byedpi
+Wants=network-online.target
+After=network-online.target nss-lookup.target
 
 [Service]
+DynamicUser=yes
+NoNewPrivileges=yes
 StandardOutput=null
 StandardError=journal
 EnvironmentFile=-/etc/byedpi/options
-ExecStart=ciadpi $OPTIONS
+ExecStart=ciadpi $BYEDPI_OPTIONS
+TimeoutStopSec=5s
+PrivateTmp=true
+ProtectSystem=full
 
 [Install]
 WantedBy=multi-user.target

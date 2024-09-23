@@ -37,18 +37,18 @@ source_armv7h=("$url/releases/download/v$_ver_st/byedpi-$_ver_slt-armv7l.tar.gz"
                 #ciadpi-completion.bash
                 byedpi_options)
 #noextract=()
-sha256sums_x86_64=(SKIP
+sha256sums_x86_64=('09485fa0516be36a4cc50482188051f12d4860ad9178e022e2baef36e4cd7cf6'
                    '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
-                   '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                   '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
-sha256sums_aarch64=(SKIP
+                   '36cb5decab3e2a5e80ae8b7511fab59defacd7b627457463307497b93074adaf'
+                   'eebd43b094312a286f182fccb99ebd6c982acda440df0685e8e93254315ec52f')
+sha256sums_aarch64=('9a14bc4718db11824341d300159a372da15de1dac372c5df268787847bcdab4c'
                     '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
-                    '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                    '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
-sha256sums_armv7h=(SKIP
+                    '36cb5decab3e2a5e80ae8b7511fab59defacd7b627457463307497b93074adaf'
+                    'eebd43b094312a286f182fccb99ebd6c982acda440df0685e8e93254315ec52f')
+sha256sums_armv7h=('deee56a5c9dbf45206840f729f0fe704639930fb3bdc9122e28688f294035e7a'
                    '18c854c6c25dffefe4b522cf1bdf5d15278a25ca785948258bddb94393f575eb'
-                   '33a613b4849a447a994ea49311a9355fd7a6f09dd9fdfa6d4d3d5ba773cce3a2'
-                   '826e822fa919ba9725d67c828f858c75121ee2274060400a51686b7586b9ff06')
+                   '36cb5decab3e2a5e80ae8b7511fab59defacd7b627457463307497b93074adaf'
+                   'eebd43b094312a286f182fccb99ebd6c982acda440df0685e8e93254315ec52f')
 
 package() {
   cd $srcdir

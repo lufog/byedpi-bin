@@ -1,9 +1,8 @@
-## Examples
 # Apply DPI bypass methods only to domains in list.txt
-#OPTIONS="--hosts \etc\byedpi\list.txt --disorder 1 --auto=none"
+#BYEDPI_OPTIONS="--hosts \etc\byedpi\list.txt --disorder 1 --auto=none"
 
 # Apply DPI bypass methods to all domains except those in list.txt
-#OPTIONS="--hosts \etc\byedpi\list.txt --auto=none --disorder 1"
+#BYEDPI_OPTIONS="--hosts \etc\byedpi\list.txt --auto=none --disorder 1"
 
-## Put your options here
-OPTIONS="--disorder 1"
+# Put your options here
+BYEDPI_OPTIONS="--disorder 1"
